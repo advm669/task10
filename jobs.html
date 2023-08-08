@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jobs</title>
+    <link rel="stylesheet" href="./bootstrap/bootstrap-5.3.0-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+    <style >
+        .brandGradient
+        {
+            background: #093180;
+background: linear-gradient(to bottom right, #093180 0%, #0CC9CF 100%);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+        }
+    </style>
+</head>
+<body>
+    <body class="bg-light">
+        <!-- nav start -->
+           <nav class="navbar navbar-dark  navbar-expand-lg  bg-dark shadow">
+               <div class="container-fluid">
+                 <a class="navbar-brand brandGradient " href="dash.html">Advm69</a>
+                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                   <span class="navbar-toggler-icon"></span>
+                 </button>
+                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                   <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                     <li class="nav-item">
+                       <a class="nav-link active" aria-current="page" href="dash.html">Home</a>
+                     </li>
+                     <li class="nav-item">
+                       <a class="nav-link" href="employees.html">Employees</a>
+                     </li>
+                     <li class="nav-item">
+                       <a class="nav-link" href="jobs.html">Jobs</a>
+                     </li>
+                   </ul>
+                   <form class="d-flex gap-3" role="search">
+                       <div class="input-group">
+                           <input type="search" class="form-control" placeholder="search for..." aria-describedby="button-addon2">
+                           <button class="btn btn-success" type="button" id="button-addon2"><i class="fa-solid fa-magnifying-glass"></i></button>
+                         </div>
+                         <div class="vr text-white"></div>
+                         <button class="btn btn-warning"> <i class="fa-solid fa-power-off"></i></button>
+                   </form>
+                 </div>
+               </div>
+             </nav>
+             <div class="container-fluid mt-3">
+                <!-- list group -->
+                <div class="row justify-content-center gap-3">
+                  <div class="col-md-2 ">
+                    <ul class="list-group shadow mb-3">
+                        <li class="list-group-item active" aria-current="true">Jobs Data</li>
+                        <a href="" class="list-group-item list-group-item-action" data-bs-toggle="modal"
+                        data-bs-target="#addjob" data-bs-whatever="@getbootstrap">Add Job</a>
+                    <!-- addjob modal -->
+                        <div class="modal fade " id="addjob" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+                            <!-- modal type -->
+                            <div class="modal-dialog modal-dialog-centered ">
+                              <div class="modal-content">
+                                <!-- modal headr -->
+                                <div class="modal-header text-bg-dark">
+                                  <h1 class="modal-title fs-5" id="exampleModalToggleLabel"> Add Job Details</h1>
+                                  <button type="button" class="btn-close " data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <!-- modal body -->
+                                <div class="modal-body">
+                                   <form class="text-secondary">
+                                    <div class="form-floating ">
+                                        <input type="date" class="form-control mb-2">
+                                        <input type="text" class="form-control" id="validationDefault01" value="Job Name" required>
+                                        </div>
+                                        <div class="row g-1 mt-2 justify-content-between ">
+                                            <button class="btn btn-success col-md-9" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal">Add Job</button>
+                                                <button type="button" class="btn btn-warning col-md-2" data-bs-dismiss="modal" aria-label="Close"> Close</button>
+                                            </div>
+                                        </div>
+                                   </form>
+                                </div>
+                                
+                              </div>
+                            </div>
+                        <!-- employee list -->
+                      </ul>
+                      <ul class="list-group shadow">
+                        <li class="list-group-item active" aria-current="true">Related Link</li>
+                        <a href="employees.html" class="list-group-item list-group-item-action"> Employees List</a>
+                        
+                      </ul>
+                  </div>
+                  <!-- table -->
+                  <div class="col-md-8 ">
+                    <table class="table table-bordered shadow">
+                        <caption class="caption-top text-bg-dark  text-center rounded-top">Jobs List</caption>
+                        <thead class="table-secondary small ">
+                          <tr >
+                            <th scope="col">ID</th>
+                            <th scope="col">Name</th>
+                            <th scope="col">Details</th>
+                            <th scope="col">Edit</th>
+                            <th scope="col">Delete</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr class="align-middle">
+                            <th scope="row">1</th>
+                            <td>Graphic Designer</td>
+                            <td><a href="#"class="btn btn-sm btn-primary d-block" data-bs-toggle="modal"
+                                data-bs-target="#Detailjob" data-bs-whatever="@getbootstrap">Details</a></td>
+                            <td><a href="#"class="btn btn-sm btn-warning d-block" data-bs-toggle="modal"
+                                data-bs-target="#editljob" data-bs-whatever="@getbootstrap">Edit</a></td>
+                            <td><a href="#"class="btn btn-sm btn-danger d-block" data-bs-toggle="modal"
+                                data-bs-target="#Deletejob" data-bs-whatever="@getbootstrap">Delete</a></td>
+                          </tr>
+                          <tr>
+                            <th scope="row">2</th>
+                            <td> Web Designer</td>
+                            <td><a href="#"class="btn btn-sm  btn-primary d-block" data-bs-toggle="modal"
+                                data-bs-target="#Detailjob" data-bs-whatever="@getbootstrap">Details</a></td>
+                            <td><a href="#"class="btn btn-sm btn-warning d-block" data-bs-toggle="modal"
+                                data-bs-target="#editljob" data-bs-whatever="@getbootstrap">Edit</a></td>
+                            <td><a href="#"class="btn btn-sm btn-danger d-block" data-bs-toggle="modal"
+                                data-bs-target="#Deletejob" data-bs-whatever="@getbootstrap">Delete</a></td>
+                          </tr>
+                          <tr>
+                            <th scope="row">3</th>
+                            <td> Interior Designer</td>
+                            <td><a href="#"class="btn btn-sm btn-primary d-block" data-bs-toggle="modal"
+                                data-bs-target="#Detailjob" data-bs-whatever="@getbootstrap">Details</a></td>
+                            <td><a href="#"class="btn btn-sm btn-warning d-block" data-bs-toggle="modal"
+                                data-bs-target="#editljob" data-bs-whatever="@getbootstrap">Edit</a></td>
+                            <td><a href="#"class="btn btn-sm btn-danger d-block" data-bs-toggle="modal"
+                                data-bs-target="#Deletejob" data-bs-whatever="@getbootstrap">Delete</a></td>
+                            
+                          </tr>
+                        </tbody>
+                      </table>
+                       <!-- employee details modal-->
+
+                         <!-- modal type -->
+                         <div class="modal fade " id="Detailjob" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+                            <div class="modal-dialog modal-dialog-centered">
+                              <div class="modal-content">
+                                <!-- madal header -->
+                                <div class="modal-header text-bg-dark">
+                                  <h1 class="modal-title fs-5" id="exampleModalToggleLabel">Employee Details</h1>
+                                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <!-- madal body -->
+                                <div class="modal-body">
+                                   <table>
+                                    <table class="table table-bordered">
+    
+                                        <tbody>
+                                            <tr>
+                                            <th scope="row">ID</th>
+                                            <td scope="row">69</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">Job Name</th>
+                                            <td scope="row">Graphic Designer</td>
+                                        </tr>
+                                       
+                                        </tbody>
+                                      </table>
+                                   </table>
+                                </div>
+                                <!-- modal footrt -->
+                                <div class="modal-footer">
+                                    <td><a href="#"class="btn  btn-warning " data-bs-toggle="modal"
+                                        data-bs-target="#editljob" data-bs-whatever="@getbootstrap" >Details</a></td>
+                                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal" aria-label="Close"> Close</button>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                    <!-- delete job modal -->
+                        
+                        <!-- modal type -->
+                        <div class="modal fade" id="Deletejob" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+                            <div class="modal-dialog modal-dialog-centered">
+                              <div class="modal-content">
+                                <!-- modal header -->
+                                <div class="modal-header ">
+                                  <h1 class="modal-title fs-5" id="exampleModalToggleLabel">Do you want delete <span class="fs-4">"Graphic Designer"</span>?</h1>
+                                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <!-- modal body -->
+                                <div class="modal-body text-center">
+                                    <button class="btn btn-danger ">YES!</button>
+                                    <button class="btn btn-warning">Nope, Go back</button>
+                                  
+                                </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="modal fade " id="editljob" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+                                <!-- edit job modal -->
+                                <!-- modal type -->
+                                <div class="modal-dialog modal-dialog-centered ">
+                                  <div class="modal-content">
+                                    <!-- modal headr -->
+                                    <div class="modal-header text-bg-dark">
+                                      <h1 class="modal-title fs-5" id="exampleModalToggleLabel">  Job Details</h1>
+                                      <button type="button" class="btn-close " data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <!-- modal body -->
+                                    <div class="modal-body">
+                                       <form class="text-secondary">
+                                        <div class="form-floating ">
+                                            <input type="date" class="form-control mb-2" id="validationDefault01" value="12/9/2020" required>
+                                            <input type="text" class="form-control" id="validationDefault01" value="Graphic Designer" required>
+                                            </div>
+                                            <div class="row g-1 mt-2 justify-content-between ">
+                                                <button class="btn btn-success col-md-9" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal">Update Job</button>
+                                                    <button type="button" class="btn btn-warning col-md-2" data-bs-dismiss="modal" aria-label="Close"> Close</button>
+                                                </div>
+                                            </div>
+                                       </form>
+                                    </div>
+                                    
+                                  </div>
+                                </div>
+                  </div>
+                </div>
+                </div>
+             <script src="./bootstrap/bootstrap-5.3.0-dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
